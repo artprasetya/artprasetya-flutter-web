@@ -8,7 +8,8 @@ import 'package:responsive_builder/responsive_builder.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var deviceType = getDeviceType(MediaQuery.of(context).size);
+    DeviceScreenType deviceType = getDeviceType(MediaQuery.of(context).size);
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: CenteredView(
@@ -33,7 +34,7 @@ class Home extends StatelessWidget {
               'ARE YOU READY TO ROCK 2021?',
               style: GoogleFonts.montserrat(
                 color: Colors.white,
-                fontSize: deviceType == DeviceScreenType.mobile ? 18 : 32,
+                fontSize: deviceType == DeviceScreenType.mobile ? 14 : 32,
                 fontWeight: FontWeight.bold,
               ),
             ),
